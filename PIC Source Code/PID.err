@@ -1,0 +1,6 @@
+>>> Warning 216 "PID.c" Line 193(1,2): Interrupts disabled during call to prevent re-entrancy:  (@ITOF)
+>>> Warning 216 "PID.c" Line 193(1,2): Interrupts disabled during call to prevent re-entrancy:  (@DIV88)
+>>> Warning 216 "PID.c" Line 193(1,2): Interrupts disabled during call to prevent re-entrancy:  (@FLT)
+      Memory usage:   ROM=40%      RAM=29% - 43%
+      0 Errors,  3 Warnings.
+Build Successful.

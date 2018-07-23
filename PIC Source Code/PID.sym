@@ -1,0 +1,299 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @TRIS_C
+029-02A strtok.save
+02B-02E _Randseed
+02F     _address
+030     _backlightVal
+031     _displayControl
+032     _displayFunction
+033     _displayMode
+034     _rows
+035     _columns
+036-037 @sprintf_string
+038-03B y
+03C-03F r
+040-043 u_atual
+044-047 u_anterior
+048-04B e_atual
+04C-04F e_anterior
+050     overflowCount
+051.0   umSegundo
+051.1   meioSegundo
+051.2   umQuartoSegundo
+051.3   umOitavoSegundo
+051.4   have_string
+052     ticks
+053-070 string
+071     RDA_isr.ctr
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0A0-0A6 MAIN.st
+0A7-0AD MAIN.ta
+0AE-0B1 @PRINTF_L32D_622FPFPF.P1
+0AE     initializeLCD.address
+0AE     ds1820_read.busy
+0AE     setCursor.col
+0AE-0AF strtof.s
+0AE-0B1 printfloat.f
+0AE     MAIN.@SCRATCH1
+0AF     ds1820_read.temp1
+0AF     setCursor.row
+0AF     initializeLCD.columns
+0AF     MAIN.@SCRATCH2
+0B0-0B1 setCursor.row_offsets
+0B0     ds1820_read.temp2
+0B0-0B1 strtof.endptr
+0B0     initializeLCD.rows
+0B0     MAIN.@SCRATCH3
+0B1-0B2 ds1820_read.temp3
+0B1     display.@SCRATCH1
+0B1     initializeLCD.@SCRATCH1
+0B1     MAIN.@SCRATCH4
+0B2     @delay_ms1.P1
+0B2     @PRINTF_L32D_622FPFPF.P2
+0B2-0B5 strtof.pow10
+0B2-0C1 printfloat.c
+0B2     setCursor.@SCRATCH1
+0B3-0B6 ds1820_read.result
+0B3     command.value
+0B3     @PRINTF_L32D_622FPFPF.@SCRATCH1
+0B4     @PRINTF_L32D_622FPFPF.@SCRATCH2
+0B5     @PRINTF_L32D_622FPFPF.@SCRATCH3
+0B6-0B9 strtof.result
+0B6     @PRINTF_L32D_622FPFPF.@SCRATCH4
+0B7     onewire_read.count
+0B7-0B8 @SITOF.P1
+0B7     onewire_write.data
+0B7     onewire_reset.@SCRATCH1
+0B7     ds1820_read.@SCRATCH1
+0B7     @PRINTF_L32D_622FPFPF.@SCRATCH5
+0B8     @delay_us1.P1
+0B8     onewire_read.data
+0B8     onewire_write.count
+0B8     ds1820_read.@SCRATCH2
+0B8     @PRINTF_L32D_622FPFPF.@SCRATCH6
+0B9     ds1820_read.@SCRATCH3
+0B9     @PRINTF_L32D_622FPFPF.@SCRATCH7
+0BA.0   strtof.skip
+0BA.1   strtof.sign
+0BA.2   strtof.point
+0BA     ds1820_read.@SCRATCH4
+0BA     @PRINTF_L32D_622FPFPF.@SCRATCH8
+0BB     strtof.c
+0BB     @PUTCHAR_BIU_1.P1
+0BC     strtof.ptr
+0BC     @PUTCHAR_BIU_1.@SCRATCH1
+0BD     strtof.@SCRATCH1
+0BE     strtof.@SCRATCH2
+0BF     strtof.@SCRATCH3
+0C0     strtof.@SCRATCH4
+0C1-0C4 @DIVFF.P1
+0C1-0C4 @ADDFF.P2
+0C2-0C5 @PRINTF_L32D_944FPFPF.P1
+0C2-0C3 printstr.c
+0C4     printstr.i
+0C5-0C8 @ADDFF.P1
+0C5-0C8 @DIVFF.P2
+0C5     printstr.@SCRATCH1
+0C6     write.value
+0C6     @PRINTF_L32D_944FPFPF.P1
+0C7     send.value
+0C7     @PRINTF_L32D_944FPFPF.@SCRATCH1
+0C8     send.mode
+0C8     @PRINTF_L32D_944FPFPF.@SCRATCH2
+0C9     send.MSB
+0C9     @ADDFF.@SCRATCH1
+0C9     @DIVFF.@SCRATCH1
+0C9     @PRINTF_L32D_944FPFPF.@SCRATCH3
+0CA     send.LSB
+0CA     @ADDFF.@SCRATCH2
+0CA     @DIVFF.@SCRATCH2
+0CA     @PRINTF_L32D_944FPFPF.@SCRATCH4
+0CB     @ADDFF.@SCRATCH3
+0CB     @DIVFF.@SCRATCH3
+0CB     send.@SCRATCH1
+0CB     @PRINTF_L32D_944FPFPF.@SCRATCH5
+0CC     write4bits.value
+0CC     @ADDFF.@SCRATCH4
+0CC     @DIVFF.@SCRATCH4
+0CC     @PRINTF_L32D_944FPFPF.@SCRATCH6
+0CD     pulseEnable._data
+0CD     @ADDFF.@SCRATCH5
+0CD     @DIVFF.@SCRATCH5
+0CD     @PRINTF_L32D_944FPFPF.@SCRATCH7
+0CE     @ADDFF.@SCRATCH6
+0CE     @DIVFF.@SCRATCH6
+0CE     pulseEnable.@SCRATCH1
+0CE     @PRINTF_L32D_944FPFPF.@SCRATCH8
+0CF     @SPRINTF.P1
+0CF-0D2 @FTOSD.P2
+0CF-0D2 @DIV3232.P3
+0CF     expanderWrite._data
+0CF-0D2 @MULFF.P1
+0CF     @ADDFF.@SCRATCH7
+0D0     @ADDFF.@SCRATCH8
+0D0     expanderWrite.@SCRATCH1
+0D1     @I2C_WRITE_1.P1
+0D3-0D6 @MULFF.P1
+0D3-0D6 @DIV3232.P2
+0D3     @FTOSD.@SCRATCH1
+0D7     @MULFF.@SCRATCH1
+0D7     @DIV3232.@SCRATCH1
+0D8     @MULFF.@SCRATCH2
+0D8     @DIV3232.@SCRATCH2
+0D9     @MULFF.@SCRATCH3
+0D9     @DIV3232.@SCRATCH3
+0DA     @MULFF.@SCRATCH4
+0DA     @DIV3232.@SCRATCH4
+0DB     @MULFF.@SCRATCH5
+0DB     @DIV3232.@SCRATCH5
+0DC-0DD @ITOF.P1
+0DC     RDA_isr.ch
+0DC     @DIV88.P1
+0DC-0DF @FLT.P2
+0DC     RTCC_isr.@SCRATCH1
+0DD     @DIV88.P1
+0DD     RDA_isr.@SCRATCH1
+0DE     @DIV88.@SCRATCH1
+0DE     RDA_isr.@SCRATCH2
+0E0-0E3 @FLT.P1
+0E4     @FLT.@SCRATCH1
+0E5     @FLT.@SCRATCH2
+0FF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00003F  @DIV88
+000056  RTCC_isr
+000087  @ITOF
+0000A6  @FLT
+0000E7  EXT_isr
+00011E  RDA_isr
+000141  @delay_us1
+000152  onewire_reset
+00016D  onewire_write
+000199  onewire_read
+0001C4  @DIVFF
+000290  ds1820_read
+0002C5  @SITOF
+000313  @delay_ms1
+000327  @I2C_WRITE_1
+000371  expanderWrite
+0003AF  write4bits
+0003B7  pulseEnable
+0003CE  send
+0003E7  command
+0003EE  clear
+0003F9  home
+000404  @MULFF
+00047B  @ADDFF
+0005C1  strtof
+000707  @PUTCHAR_BIU_1
+00071E  @FTOSD
+00073F  @DIV3232
+000790  printstr
+0007A5  write
+0007B2  @SPRINTF
+0007C1  printfloat
+0007E6  resetTimes
+000800  @PRINTF_L32D_622FPFPF
+0008E9  @PRINTF_L32D_944FPFPF
+0009D4  setCursor
+0009FD  MAIN
+0009FD  @cinit1
+000A39  @cinit2
+000A8E  initializeLCD
+000B17  display
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\mathe\Documents\Microcontroladores\Microcontroladores\PIC Source Code\
+
+Project Files:
+    PID.c                                                   [21-Jul-18 12:40  CRC=3F6D43C5]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [12-Nov-13 14:35  CRC=81334808]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-Jun-11 14:39  CRC=0B6669CF]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [16-Jul-10 09:27  CRC=897CEC6C]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-Jul-11 10:13  CRC=23EDEC8F]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Jan-08 13:55  CRC=2D1F019F]
+    LCD_I2C.c                                               [21-Jul-18 12:06  CRC=958BF359]
+    sensor_temperatura.c                                    [20-Jul-18 09:28  CRC=28FEAAE0]
+
+Source signature=8E1A194F
+
+Units:
+    PID (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   PID.xsym
+    Errors:      PID.err
+    Ext Symbols: PID.esym
+    INHX8:       PID.hex
+    Symbols:     PID.sym
+    List:        PID.lst
+    Debug/COFF:  PID.cof
+    Project:     PID.ccspjt
+    Call Tree:   PID.tre
+    Statistics:  PID.STA
